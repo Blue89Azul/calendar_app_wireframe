@@ -53,7 +53,7 @@ button {
   border-radius: 25px;
 }
 
-.btn__addPlan>span {
+.btn__addPlan > span {
   display: block;
   width: 22px;
   height: 5px;
@@ -86,15 +86,15 @@ button {
   height: 100vh;
   display: block;
   position: relative;
-  border: 1px solid #000;
   border-radius: 0 30px 0 0;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 .btn__close {
   display: block;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 15px;
 }
 
 .icon {
@@ -114,19 +114,60 @@ button {
 
 .profile__userName {
   font-weight: bold;
-  color: #fff;
 }
 
 .profile__birthday {
-  color: #fff;
   opacity: 0.5;
 }
 
 .btn__edit {
   display: inline-block;
-  border: 3px double #fff;
+  border: 3px double #000;
   border-radius: 10px;
   padding: 0 10px;
-  color: #fff;
+  color: #000;
   font-weight: bold;
+}
+
+/* コメント画面 */
+
+.coment {
+  color: #fff;
+  height: auto;
+  overflow: hidden;
+}
+
+.coment__title {
+  text-align: center;
+}
+
+.coment__title > h3 {
+  display: inline-block;
+  margin:10px 10px 10px 0;
+}
+
+.coment__title > p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.coment__list > li {
+  border: 1px solid #fff;
+  background-color: white;
+  color: #000;
+  margin: 10px 0;
+}
+
+.coment__list > li  > p {
+  display: inline-block;
+  margin: 5px 0 0 5px;
+}
+
+.coment__list > li  > p:last-child {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 10px;
 }

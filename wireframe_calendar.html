@@ -10,7 +10,7 @@
 </head>
 
 <body class="calendar">
-  <div class="container-fluid col-md-12">
+  <div class="container-fluid col-12">
     <div class="row  main-style">
       <h2 class="main-style__title">2020.8</h2>
       <table class="table col-xs-12 main-style__table">
@@ -403,26 +403,46 @@
     </div>
   </div>
 <!-- プロフィール画面 -->
-  <div class="container  profile d-flex m-0 p-0">
-    <div class="col-md-11 p-0">
-      <button type="button" class="close btn__close" aria-label="Close">
+  <div class="container  d-flex m-0 p-0">
+    <div class="col-11 profile p-0">
+      <button type="button" class="close btn__close " aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
       <div class="acounts d-flex justify-content-around">
-        <div class="your-acount text-center bg-success col-md-6">
+        <div class="your-acount text-center col-md-6">
           <img class="icon " src="img/profile_acount.jpeg" alt="アカウント画像">
           <p class="profile__userName mb-0">まりも</p>
           <p class="profile__birthday mb-2">1992年11月9日</p>
           <a class="btn__edit mb-2" href="#">編集</a>
         </div>
-        <div class="frend-acount text-center bg-info col-md-6">
+        <div class="frend-acount text-center col-md-6">
           <img class="icon" src="img/profile_acount.jpeg" alt="アカウント画像">
           <p class="profile__userName mb-0">白い恋人</p>
           <p class="profile__birthday">1991年11月22日</p>
         </div>
       </div>
-      <div class="coments-list">
-        
+      <div class="coment bg-primary">
+        <div class="coment__title">
+          <h3>DONE FOR US</h3>
+          <p>2020.8</p>
+        </div>
+        <ul class="coment__list">
+          <li>
+            <p class="coment__month">8月１日</p>
+            <p class="coment__persons"><span>まりも</span> → <span>白い恋人</span></p>
+            <img src="img/like.png" alt="いいね">
+            <img src="img/like.png" alt="いいね">
+            <p>電話で、好きって言ってくれた！</p>
+          </li>
+          <li>
+            <p class="coment__month">8月16日</p>
+            <p class="coment__persons"><span>白い恋人</span> → <span>まりも</span></p>
+            <img src="img/like.png" alt="いいね">
+            <img src="img/like.png" alt="いいね">
+            <img src="img/like.png" alt="いいね">
+            <p>大きい荷物を運ぶの手伝ってくれた！</p>
+          </li>
+        </ul>
       </div>
     </div>
     </div>
