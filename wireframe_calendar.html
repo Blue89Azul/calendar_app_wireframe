@@ -402,7 +402,8 @@
       </table>
     </div>
   </div>
-<!-- プロフィール画面 -->
+
+  <!-- プロフィール画面 -->
   <div class="container d-flex m-0 p-0">
     <div class="col-11 side-page bg-primary p-0">
       <button type="button" class="close btn__close " aria-label="Close">
@@ -449,8 +450,9 @@
         </ul>
       </div>
     </div>
-    </div>
-<!-- 予定追加 -->
+  </div>
+
+  <!-- 予定追加 -->
   <div class="conatiner d-flex m-0 p-0">
     <div class="col-11 side-page p-0">
       <button type="button" class="close btn__close " aria-label="Close">
@@ -459,16 +461,17 @@
       <form class="form" action="#" method="post">
         <input type="submit" name="submit" value="保存">
         <input class="form__title mt-5" type="text" name="title" value="" placeholder="予定タイトル（スイッチ切り替わったら、コメントタイトルに）">
-        <div class="form__change-btn mt-5 mx-auto">
+        <div class="form__change-btn my-5 mx-auto">
           <input type="checkbox" id="changebtn" name="changebtn" value="1">
           <label for="changebtn">ADD PLAN</label>
         </div>
-        <div class="form__times col-11 mx-auto mt-5">
-          <a href="#"><p>8月16日(日) <span>10:00</span></p></a>
-          <a href="#"><p>8月16日(日) <span>11:00</span></p></a>
-        </div>
-        
-        <div class="form__dates col-12 mx-auto mb-3">
+
+<!-- 予定ボタン　（DONE FOR US昨日の時は、年と月だけ） -->
+
+        <a class="form__times" href="#">
+          <p>8月16日(日) <span>10:00</span></p>
+        </a>
+        <div class="form__dates col-12 mb-3">
           <select class="form__date" name="form__date" size="3">
             <option class="year" value="">2020</option>
             <option class="year" value="">2021</option>
@@ -494,6 +497,78 @@
             <option class="minute" value="">02</option>
             <option class="minute" value="">03</option>
           </select>
+          <div class="form__dates-btns">
+            <a class="btn btn-secondary col-5" href="#" role="button">キャンセル</a>
+            <a class="btn btn-primary col-5" href="#" role="button">確認</a>
+          </div>
+        </div>
+
+        <a class="form__times" href="#">
+          <p>8月16日(日) <span>11:00</span></p>
+        </a>
+        <div class="form__dates col-12">
+          <select class="form__date" name="form__date" size="3">
+            <option class="year" value="">2020</option>
+            <option class="year" value="">2021</option>
+            <option class="year" value="">2022</option>
+          </select>
+          <select class="form__date" name="form__date" size="3">
+            <option class="month" value="">08</option>
+            <option class="month" value="">09</option>
+            <option class="month" value="">10</option>
+          </select>
+          <select class="form__date" name="form__date" size="3">
+            <option class="day" value="">01</option>
+            <option class="day" value="">02</option>
+            <option class="day" value="">03</option>
+          </select>
+          <select class="form__date" name="form__date" size="3">
+            <option class="hour" value="">01</option>
+            <option class="hour" value="">02</option>
+            <option class="hour" value="">03</option>
+          </select>
+          <select class="form__date" name="form__date" size="3">
+            <option class="minute" value="">01</option>
+            <option class="minute" value="">02</option>
+            <option class="minute" value="">03</option>
+          </select>
+          <div class="form__dates-btns">
+            <a class="btn btn-secondary col-5" href="#" role="button">キャンセル</a>
+            <a class="btn btn-primary col-5" href="#" role="button">確認</a>
+          </div>
+        </div>
+
+        <a class="form__times-coments" href="#">
+          <p>8月16日</p>
+        </a>
+        <div class="form__dates col-12">
+          <select class="form__date" name="form__date" size="3">
+            <option class="year" value="">2020</option>
+            <option class="year" value="">2021</option>
+            <option class="year" value="">2022</option>
+          </select>
+          <select class="form__date" name="form__date" size="3">
+            <option class="month" value="">08</option>
+            <option class="month" value="">09</option>
+            <option class="month" value="">10</option>
+          </select>
+          <div class="form__dates-btns">
+            <a class="btn btn-secondary col-5" href="#" role="button">キャンセル</a>
+            <a class="btn btn-primary col-5" href="#" role="button">確認</a>
+          </div>
+        </div>
+
+        <!-- スイッチャーによって切り替え -->
+        <div class="form__colors">
+          <input class="radio" type="radio" name="red" value="">
+          <input class="radio" type="radio" name="blue" value="">
+          <input class="radio" type="radio" name="yellow" value="">
+        </div>
+
+        <div class="form__likes">
+          <input type="checkbox" name="like" value="1">
+          <input type="checkbox" name="like" value="1">
+          <input type="checkbox" name="like" value="1">
         </div>
 
       </form>

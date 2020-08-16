@@ -53,7 +53,7 @@ button {
   border-radius: 25px;
 }
 
-.btn__addPlan > span {
+.btn__addPlan>span {
   display: block;
   width: 22px;
   height: 5px;
@@ -82,10 +82,9 @@ button {
 }
 
 /* プロフィール画面 */
-
 .open {
   display: block;
-  transform:scaleX(1) ;
+  transform: scaleX(1);
   transition: all 0.5s;
 }
 
@@ -142,7 +141,6 @@ button {
 }
 
 /* コメント画面 */
-
 .coment {
   color: #fff;
   height: auto;
@@ -153,18 +151,18 @@ button {
   text-align: center;
 }
 
-.coment__title > h3 {
+.coment__title>h3 {
   display: inline-block;
-  margin:10px 10px 10px 0;
+  margin: 10px 10px 10px 0;
 }
 
-.coment__title > p {
+.coment__title>p {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
 
-.coment__list > li {
+.coment__list>li {
   position: relative;
   border: 1px solid #fff;
   background-color: white;
@@ -172,16 +170,16 @@ button {
   margin: 10px 0;
 }
 
-.coment__persons > span {
+.coment__persons>span {
   font-weight: bold;
 }
 
-.coment__list > li  > p {
+.coment__list>li>p {
   display: inline-block;
   margin: 5px 0 0 5px;
 }
 
-.coment__list > li  > p:last-child {
+.coment__list>li>p:last-child {
   display: block;
   font-weight: bold;
   font-size: 1.5em;
@@ -205,18 +203,17 @@ button {
   border-bottom: 1px solid gray;
 }
 
-
 .form__change-btn {
   width: 280px;
   position: relative;
   margin: 0;
 }
 
-.form__change-btn > input {
+.form__change-btn>input {
   display: none;
 }
 
-.form__change-btn > label {
+.form__change-btn>label {
   width: 100%;
   height: 50px;
   text-align: center;
@@ -231,7 +228,7 @@ button {
   cursor: pointer;
 }
 
-.form__change-btn > label::before {
+.form__change-btn>label::before {
   content: "";
   transition: all 0.3s;
   width: 40px;
@@ -245,15 +242,15 @@ button {
   top: 2px;
 }
 
-.form__change-btn > input[type=checkbox] + label {
+.form__change-btn>input[type=checkbox]+label {
   background-color: red;
 }
 
-.form__change-btn > input[type=checkbox]:checked + label {
+.form__change-btn>input[type=checkbox]:checked+label {
   background-color: blue;
 }
 
-.form__change-btn > input[type=checkbox]:checked + label::before {
+.form__change-btn>input[type=checkbox]:checked+label::before {
   left: 232px;
 }
 
@@ -263,16 +260,22 @@ button {
   padding: 0;
   text-align: center;
   letter-spacing: 4px;
-}
-
-.form__times > a {
   color: #000;
 }
 
 /* 予定スロット */
 .form__dates {
-  display: flex;
-  justify-content:space-between;
-  font-size: 1.5em;
+  display: none;
+  text-align: center;
+  font-size: 1.7em;
   font-weight: bold;
+}
+
+.form__date {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 1) inset;
+}
+
+.form__dates-btns {
+  display: flex;
+  justify-content: space-around;
 }
