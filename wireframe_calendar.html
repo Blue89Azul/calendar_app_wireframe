@@ -403,8 +403,8 @@
     </div>
   </div>
 <!-- プロフィール画面 -->
-  <div class="container  d-flex m-0 p-0">
-    <div class="col-11 profile p-0">
+  <div class="container d-flex m-0 p-0">
+    <div class="col-11 side-page bg-primary p-0">
       <button type="button" class="close btn__close " aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -421,32 +421,85 @@
           <p class="profile__birthday">1991年11月22日</p>
         </div>
       </div>
-      <div class="coment bg-primary">
+      <div class="coment ">
         <div class="coment__title">
           <h3>DONE FOR US</h3>
           <p>2020.8</p>
         </div>
         <ul class="coment__list">
           <li>
-            <p class="coment__month">8月１日</p>
+            <p class="coment__month">8月1日</p>
             <p class="coment__persons"><span>まりも</span> → <span>白い恋人</span></p>
-            <img src="img/like.png" alt="いいね">
-            <img src="img/like.png" alt="いいね">
+            <div class="likes">
+              <img src="img/like.png" alt="いいね">
+              <img src="img/like.png" alt="いいね">
+            </div>
             <p>電話で、好きって言ってくれた！</p>
           </li>
           <li>
             <p class="coment__month">8月16日</p>
             <p class="coment__persons"><span>白い恋人</span> → <span>まりも</span></p>
-            <img src="img/like.png" alt="いいね">
-            <img src="img/like.png" alt="いいね">
-            <img src="img/like.png" alt="いいね">
+            <div class="likes">
+              <img src="img/like.png" alt="いいね">
+              <img src="img/like.png" alt="いいね">
+              <img src="img/like.png" alt="いいね">
+            </div>
             <p>大きい荷物を運ぶの手伝ってくれた！</p>
           </li>
         </ul>
       </div>
     </div>
     </div>
+<!-- 予定追加 -->
+  <div class="conatiner d-flex m-0 p-0">
+    <div class="col-11 side-page p-0">
+      <button type="button" class="close btn__close " aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <form class="form" action="#" method="post">
+        <input type="submit" name="submit" value="保存">
+        <input class="form__title mt-5" type="text" name="title" value="" placeholder="予定タイトル（スイッチ切り替わったら、コメントタイトルに）">
+        <div class="form__change-btn mt-5 mx-auto">
+          <input type="checkbox" id="changebtn" name="changebtn" value="1">
+          <label for="changebtn">ADD PLAN</label>
+        </div>
+        <div class="form__times col-11 mx-auto mt-5">
+          <a href="#"><p>8月16日(日) <span>10:00</span></p></a>
+          <a href="#"><p>8月16日(日) <span>11:00</span></p></a>
+        </div>
+        
+        <div class="form__dates col-12 mx-auto mb-3">
+          <select class="form__date" name="form__date" size="3">
+            <option class="year" value="">2020</option>
+            <option class="year" value="">2021</option>
+            <option class="year" value="">2022</option>
+          </select>
+          <select class="form__date" name="form__date" size="3">
+            <option class="month" value="">08</option>
+            <option class="month" value="">09</option>
+            <option class="month" value="">10</option>
+          </select>
+          <select class="form__date" name="form__date" size="3">
+            <option class="day" value="">01</option>
+            <option class="day" value="">02</option>
+            <option class="day" value="">03</option>
+          </select>
+          <select class="form__date" name="form__date" size="3">
+            <option class="hour" value="">01</option>
+            <option class="hour" value="">02</option>
+            <option class="hour" value="">03</option>
+          </select>
+          <select class="form__date" name="form__date" size="3">
+            <option class="minute" value="">01</option>
+            <option class="minute" value="">02</option>
+            <option class="minute" value="">03</option>
+          </select>
+        </div>
 
+      </form>
+
+    </div>
+  </div>
   </div>
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/main.js"></script>

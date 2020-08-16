@@ -82,12 +82,24 @@ button {
 }
 
 /* プロフィール画面 */
-.profile {
+
+.open {
+  display: block;
+  transform:scaleX(1) ;
+  transition: all 0.5s;
+}
+
+.side-page {
   height: 100vh;
   display: block;
   position: relative;
   border-radius: 0 30px 0 0;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  /* transform:scaleX(0) ; */
+}
+
+.acounts {
+  background-color: #fff;
 }
 
 .btn__close {
@@ -153,10 +165,15 @@ button {
 }
 
 .coment__list > li {
+  position: relative;
   border: 1px solid #fff;
   background-color: white;
   color: #000;
   margin: 10px 0;
+}
+
+.coment__persons > span {
+  font-weight: bold;
 }
 
 .coment__list > li  > p {
@@ -170,4 +187,92 @@ button {
   font-size: 1.5em;
   text-align: center;
   margin: 10px;
+}
+
+.likes {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* 予定入力欄 */
+.form__title {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: none;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+
+.form__change-btn {
+  width: 280px;
+  position: relative;
+  margin: 0;
+}
+
+.form__change-btn > input {
+  display: none;
+}
+
+.form__change-btn > label {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  line-height: 2.5;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 3px solid #000;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.form__change-btn > label::before {
+  content: "";
+  transition: all 0.3s;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 3px solid;
+  border-radius: 100px;
+  left: 2px;
+  top: 2px;
+}
+
+.form__change-btn > input[type=checkbox] + label {
+  background-color: red;
+}
+
+.form__change-btn > input[type=checkbox]:checked + label {
+  background-color: blue;
+}
+
+.form__change-btn > input[type=checkbox]:checked + label::before {
+  left: 232px;
+}
+
+.form__times {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+.form__times > a {
+  color: #000;
+}
+
+/* 予定スロット */
+.form__dates {
+  display: flex;
+  justify-content:space-between;
+  font-size: 1.5em;
+  font-weight: bold;
 }
