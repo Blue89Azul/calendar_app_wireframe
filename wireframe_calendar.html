@@ -461,17 +461,17 @@
       <form class="form" action="#" method="post">
         <input type="submit" name="submit" value="保存">
         <input class="form__title mt-5" type="text" name="title" value="" placeholder="予定タイトル（スイッチ切り替わったら、コメントタイトルに）">
-        <div class="form__change-btn my-5 mx-auto">
+        <div class="form__change-btn mt-3 mb-2 mx-auto">
           <input type="checkbox" id="changebtn" name="changebtn" value="1">
           <label for="changebtn">ADD PLAN</label>
         </div>
 
-<!-- 予定ボタン　（DONE FOR US昨日の時は、年と月だけ） -->
+        <!-- 予定ボタン　（DONE FOR US昨日の時は、年と月だけ） -->
 
         <a class="form__times" href="#">
           <p>8月16日(日) <span>10:00</span></p>
         </a>
-        <div class="form__dates col-12 mb-3">
+        <div class="form__dates col-12 mb-2">
           <select class="form__date" name="form__date" size="3">
             <option class="year" value="">2020</option>
             <option class="year" value="">2021</option>
@@ -498,8 +498,8 @@
             <option class="minute" value="">03</option>
           </select>
           <div class="form__dates-btns">
-            <a class="btn btn-secondary col-5" href="#" role="button">キャンセル</a>
-            <a class="btn btn-primary col-5" href="#" role="button">確認</a>
+            <a class="btn btn-secondary btn-sm col-5" href="#" role="button">キャンセル</a>
+            <a class="btn btn-primary btn-sm col-5" href="#" role="button">確認</a>
           </div>
         </div>
 
@@ -533,42 +533,63 @@
             <option class="minute" value="">03</option>
           </select>
           <div class="form__dates-btns">
-            <a class="btn btn-secondary col-5" href="#" role="button">キャンセル</a>
-            <a class="btn btn-primary col-5" href="#" role="button">確認</a>
+            <a class="btn btn-secondary btn-sm col-5" href="#" role="button">キャンセル</a>
+            <a class="btn btn-primary btn-sm col-5" href="#" role="button">確認</a>
           </div>
         </div>
 
-        <a class="form__times-coments" href="#">
-          <p>8月16日</p>
-        </a>
-        <div class="form__dates col-12">
-          <select class="form__date" name="form__date" size="3">
-            <option class="year" value="">2020</option>
-            <option class="year" value="">2021</option>
-            <option class="year" value="">2022</option>
-          </select>
-          <select class="form__date" name="form__date" size="3">
-            <option class="month" value="">08</option>
-            <option class="month" value="">09</option>
-            <option class="month" value="">10</option>
-          </select>
-          <div class="form__dates-btns">
-            <a class="btn btn-secondary col-5" href="#" role="button">キャンセル</a>
-            <a class="btn btn-primary col-5" href="#" role="button">確認</a>
+        <div class="doneForUs">
+          <a class="form__times" href="#">
+            <p>8月16日</p>
+          </a>
+          <div class="form__dates col-12">
+            <select class="form__date" name="form__date" size="3">
+              <option class="year" value="">2020</option>
+              <option class="year" value="">2021</option>
+              <option class="year" value="">2022</option>
+            </select>
+            <select class="form__date" name="form__date" size="3">
+              <option class="month" value="">08</option>
+              <option class="month" value="">09</option>
+              <option class="month" value="">10</option>
+            </select>
+            <div class="form__dates-btns">
+              <a class="btn btn-secondary col-5" href="#" role="button">キャンセル</a>
+              <a class="btn btn-primary col-5" href="#" role="button">確認</a>
+            </div>
           </div>
         </div>
+
 
         <!-- スイッチャーによって切り替え -->
-        <div class="form__colors">
-          <input class="radio" type="radio" name="red" value="">
-          <input class="radio" type="radio" name="blue" value="">
-          <input class="radio" type="radio" name="yellow" value="">
+        <div class="form__colors d-flex justify-content-around">
+          <div class="color-box red">
+            <input id="red" class="color-radio red bg-danger" type="radio" name="color" value="">
+            <label class="color-label red" for="red">RED</label>
+          </div>
+          <div class="color-box blue">
+            <input id="blue" class="color-radio blue bg-danger" type="radio" name="color" value="">
+            <label class="color-label blue" for="blue">BLUE</label>
+          </div>
+          <div class="color-box green">
+            <input id="green" class="color-radio green bg-danger" type="radio" name="color" value="">
+            <label class="color-label green" for="green">YELLOW</label>
+          </div>
         </div>
 
         <div class="form__likes">
-          <input type="checkbox" name="like" value="1">
-          <input type="checkbox" name="like" value="1">
-          <input type="checkbox" name="like" value="1">
+          <div class="like-box">
+            <input id="like" class="like" type="checkbox" name="like" value="1">
+            <label for="like"><img src="" alt="いいね！"></label>
+          </div>
+          <div class="like-box">
+            <input id="like" class="like" type="checkbox" name="like" value="1">
+            <label for="like"><img src="" alt="いいね！"></label>
+          </div>
+          <div class="like-box">
+            <input id="like" class="like" type="checkbox" name="like" value="1">
+            <label for="like"><img src="" alt="いいね！"></label>
+          </div>
         </div>
 
       </form>

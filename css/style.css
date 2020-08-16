@@ -267,7 +267,7 @@ button {
 .form__dates {
   display: none;
   text-align: center;
-  font-size: 1.7em;
+  font-size: 1.4em;
   font-weight: bold;
 }
 
@@ -279,3 +279,78 @@ button {
   display: flex;
   justify-content: space-around;
 }
+
+/* 予定：色変更 */
+.color-box {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  border-radius: 70px;
+  background-color: #fff;
+}
+
+.color-box.red {
+  border: 3px solid red;
+}
+
+.color-box.blue {
+  border: 3px solid blue;
+}
+
+.color-box.green {
+  border: 3px solid green;
+}
+
+.color-box.red>input[type=radio]:checked+label {
+  background-color: red;
+  color: #fff;
+}
+
+.color-box.blue>input[type=radio]:checked+label {
+  background-color: blue;
+  color: #fff;
+}
+
+.color-box.green>input[type=radio]:checked+label {
+  background-color: green;
+  color: #fff;
+}
+
+.color-radio {
+  display: none;
+}
+
+.color-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+}
+
+.color-label.red {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1;
+  color: red;
+}
+
+.color-label.blue {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1;
+  color: blue;
+}
+
+.color-label.green {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1;
+  color: green;
+}
+
+/* コメント：いいね！ */
