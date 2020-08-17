@@ -387,11 +387,11 @@
           <tr>
             <td colspan="7">
               <div class="d-flex justify-content-between align-items-center">
-                <button class="btn__profile text-secondary">
+                <button type="button" class="btn__profile text-secondary">
                   <img src="img/profile.jpeg" alt="プロフィール画像">
                   <p class="d-block">プロフィール</p>
                 </button>
-                <button class="btn__addPlan bg-primary">
+                <button type="button"class="btn__addPlan bg-primary">
                   <span></span>
                   <span></span>
                 </button>
@@ -403,18 +403,18 @@
     </div>
   </div>
 
-  <!-- プロフィール画面 -->
-  <div class="container d-flex m-0 p-0">
-    <div class="col-11 side-page bg-primary p-0">
-      <button type="button" class="close btn__close " aria-label="Close">
+  <!-- プロフィール一覧画面 -->
+  <div class="col-11 shift-position__profile d-flex mt-2 p-0">
+    <div class="col-12 side-page left bg-primary p-0">
+      <button type="button" class="close btn__close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
       <div class="acounts d-flex justify-content-around">
         <div class="your-acount text-center col-md-6">
-          <img class="icon " src="img/profile_acount.jpeg" alt="アカウント画像">
+          <img class="icon" src="img/profile_acount.jpeg" alt="アカウント画像">
           <p class="profile__userName mb-0">まりも</p>
           <p class="profile__birthday mb-2">1992年11月9日</p>
-          <a class="btn__edit mb-2" href="#">編集</a>
+          <a type="button" class="btn__edit mb-2" href="#">編集</a>
         </div>
         <div class="frend-acount text-center col-md-6">
           <img class="icon" src="img/profile_acount.jpeg" alt="アカウント画像">
@@ -453,21 +453,23 @@
   </div>
 
   <!-- 予定追加 -->
-  <div class="conatiner d-flex m-0 p-0">
-    <div class="col-11 side-page p-0">
+  <div class="col-11 shift-position__plan m-0 p-0">
+    <div class="col-12 side-page d-flex justify-content-end p-0 m-0">
       <button type="button" class="close btn__close " aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
       <form class="form" action="#" method="post">
-        <input type="submit" name="submit" value="保存">
+        <input class="btn btn-primary" type="submit" name="submit" value="保存">
         <input class="form__title mt-5" type="text" name="title" value="" placeholder="予定タイトル（スイッチ切り替わったら、コメントタイトルに）">
         <div class="form__change-btn mt-3 mb-2 mx-auto">
           <input type="checkbox" id="changebtn" name="changebtn" value="1">
           <label for="changebtn">ADD PLAN</label>
         </div>
+        <button type="button" class="close btn__close " aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
 
         <!-- 予定ボタン　（DONE FOR US昨日の時は、年と月だけ） -->
-
         <a class="form__times" href="#">
           <p>8月16日(日) <span>10:00</span></p>
         </a>
@@ -537,7 +539,6 @@
             <a class="btn btn-primary btn-sm col-5" href="#" role="button">確認</a>
           </div>
         </div>
-
         <div class="doneForUs">
           <a class="form__times" href="#">
             <p>8月16日</p>
@@ -553,14 +554,17 @@
               <option class="month" value="">09</option>
               <option class="month" value="">10</option>
             </select>
+            <select class="form__date" name="form__date" size="3">
+              <option class="day" value="">01</option>
+              <option class="day" value="">02</option>
+              <option class="day" value="">03</option>
+            </select>
             <div class="form__dates-btns">
               <a class="btn btn-secondary col-5" href="#" role="button">キャンセル</a>
               <a class="btn btn-primary col-5" href="#" role="button">確認</a>
             </div>
           </div>
         </div>
-
-
         <!-- スイッチャーによって切り替え -->
         <div class="form__colors d-flex justify-content-around">
           <div class="color-box red">
@@ -573,30 +577,67 @@
           </div>
           <div class="color-box green">
             <input id="green" class="color-radio green bg-danger" type="radio" name="color" value="">
-            <label class="color-label green" for="green">YELLOW</label>
+            <label class="color-label green" for="green">GREEN</label>
           </div>
         </div>
+        <div class="form__likes d-flex justify-content-around">
+          <input id="likeA" class="like" type="checkbox" name="like" value="1">
+          <label class="like-label" for="likeA"><img src="img/like-btn.png" alt="いいね！"></label>
+          <input id="likeB" class="like" type="checkbox" name="like" value="1">
+          <label class="like-label" for="likeB"><img src="img/like-btn.png" alt="いいね！"></label>
+          <input id="likeC" class="like" type="checkbox" name="like" value="1">
+          <label class="like-label" for="likeC"><img src="img/like-btn.png" alt="いいね！"></label>
+        </div>
+      </form>
+    </div>
+  </div>
 
-        <div class="form__likes">
-          <div class="like-box">
-            <input id="like" class="like" type="checkbox" name="like" value="1">
-            <label for="like"><img src="" alt="いいね！"></label>
-          </div>
-          <div class="like-box">
-            <input id="like" class="like" type="checkbox" name="like" value="1">
-            <label for="like"><img src="" alt="いいね！"></label>
-          </div>
-          <div class="like-box">
-            <input id="like" class="like" type="checkbox" name="like" value="1">
-            <label for="like"><img src="" alt="いいね！"></label>
-          </div>
+  <!-- プロフィール編集画面 -->
+  <div class="col-11 mx-auto mt-2 shift-position__change-profile p-0 m-0">
+    <div class="col-12  side-page">
+      <button type="button" class="close btn__close-change-profile " aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <form class="form__profile" action="#" method="post" enctype="multipart/form-data">
+        <h3 class="pt-3">プロフィール編集</h3>
+        <div class="form-group icon-group">
+          <input id="icon" class="icon-btn form-control" type="file" name="icon" value="">
+          <label for="icon"><img class="icon" src="img/profile_acount.jpeg" alt="初期アイコン">
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="userName">名前</label>
+          <input id="userName" class="form-control" type="text" name="userName" value="">
+        </div>
+        <div class="form-group">
+          <label for="birthday">誕生日</label>
+          <input class="form-control" id="birthday" type="text" name="birthday" value="">
+        </div>
+        <div class="form-group d-flex justify-content-between">
+          <select class="form__date form-control col-5" name="birthday-year" size="3">
+            <option class="year" value="">2020</option>
+            <option class="year" value="">2021</option>
+            <option class="year" value="">2022</option>
+          </select>
+          <select class="form__date form-control col-3" name="birthday-month" size="3">
+            <option class="month" value="">08</option>
+            <option class="month" value="">09</option>
+            <option class="month" value="">10</option>
+          </select>
+          <select class="form__date form-control col-3" name="birthday-day" size="3">
+            <option class="day" value="">01</option>
+            <option class="day" value="">02</option>
+            <option class="day" value="">03</option>
+          </select>
+        </div>
+        <div class="form-group">
+        <input class="btn btn-primary form-control" type="submit" name="" value="確認">
         </div>
 
       </form>
-
     </div>
   </div>
-  </div>
+
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
