@@ -404,7 +404,7 @@
   </div>
 
   <!-- プロフィール一覧画面 -->
-  <div class="col-11 shift-position__profile d-flex mt-2 p-0">
+  <div class="col-11 shift-position__profile d-flex p-0">
     <div class="col-12 side-page left bg-primary p-0">
       <button type="button" class="close btn__close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -460,6 +460,7 @@
       </button>
       <form class="form" action="#" method="post">
         <input class="btn btn-primary" type="submit" name="submit" value="保存">
+        <!-- スイッチが切り替わったら、「予定タイトル」が「コメントタイトル」になるように変更 -->
         <input class="form__title mt-5" type="text" name="title" value="" placeholder="予定タイトル">
         <div class="form__change-btn mt-3 mb-2 mx-auto">
           <input type="checkbox" id="changebtn" name="changebtn" value="1">
