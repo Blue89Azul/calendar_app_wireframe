@@ -461,10 +461,11 @@
       <form class="form" action="#" method="post">
         <input class="btn btn-primary" type="submit" name="submit" value="保存">
         <!-- スイッチが切り替わったら、「予定タイトル」が「コメントタイトル」になるように変更 -->
+
         <input class="form__title mt-5" type="text" name="title" value="" placeholder="予定タイトル">
         <div class="form__change-btn mt-3 mb-2 mx-auto">
-          <input type="checkbox" id="changebtn" name="changebtn" value="1">
-          <label for="changebtn">ADD PLAN</label>
+          <input class="change-btn" type="checkbox" id="changebtn" name="changebtn" value="1">
+          <label class="change-btn-label" for="changebtn">ADD PLAN</label>
         </div>
         <button type="button" class="close btn__close " aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -541,7 +542,7 @@
           </div>
         </div>
         <div class="doneForUs">
-          <a class="form__times" href="#">
+          <a class="form__times-doneForUs" href="#">
             <p>8月16日</p>
           </a>
           <div class="form__dates col-12">

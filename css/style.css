@@ -284,6 +284,16 @@ button {
   color: #000;
 }
 
+.form__times-doneForUs {
+  display: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+  letter-spacing: 4px;
+  color: #000;
+}
+
 /* 予定スロット */
 .form__dates {
   display: none;
@@ -375,6 +385,10 @@ button {
 }
 
 /* コメント：いいね！ */
+.form__likes {
+  display: none;
+}
+
 input[type=checkbox].like {
   display: none;
 }
@@ -386,6 +400,7 @@ input[type=checkbox].like+label {
 }
 
 input[type=checkbox].like+label>img {
+  display: none;
   width: 100%;
   height: 100%;
 }
