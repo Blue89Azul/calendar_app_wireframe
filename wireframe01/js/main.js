@@ -24,13 +24,9 @@ $(function() {
 
   //予定入力画面　スイッチャー
   $(".change-btn").click(transform);
-
-
-
   function transform() {
     $(this).toggleClass("active");
     var flg = $(this).hasClass("active")
-
     if (flg == true) {
       // 予定タイトル
       $(".form__title").attr('placeholder', 'DONE FOR US タイトル');
@@ -55,6 +51,8 @@ $(function() {
       $("input[type=checkbox].like+label>img").css("display", "none");
     }
 
+    // 予定スロット表示
+    
 
   }
 
