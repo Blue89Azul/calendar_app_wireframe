@@ -106,7 +106,6 @@ tr[class^="week"]>td>p {
   top: 0;
   left: 0;
   overflow: hidden;
-
 }
 
 .open-profile {
@@ -145,7 +144,7 @@ tr[class^="week"]>td>p {
 
 .profilr__info-body>h6 {
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
 .profilr__info-body>p {
@@ -153,4 +152,81 @@ tr[class^="week"]>td>p {
   color: gray;
   padding-bottom: 10px;
   margin: 0;
+}
+
+/* 予定追加フォーム(モーダル) */
+.plan-form__title {
+  background-color: skyblue;
+}
+
+.plan-form__title > input[type=text]{
+  background: transparent;
+}
+
+/* 予定追加フォーム・表示切り替えボタン */
+.plan-form__change-btn {
+  width: 100%;
+  position: relative;
+  margin: 0;
+}
+
+.plan-form__change-btn>input {
+  display: none;
+}
+
+.plan-form__change-btn>label {
+  width: 50%;
+  height: 30px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.plan-form__change-btn>label::before {
+  content: "";
+  transition: all 0.3s;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 100px;
+  left: 2px;
+  top: 2px;
+}
+
+.plan-form__change-btn>input[type=checkbox]+label {
+  background-color: skyblue;
+  color: #000;
+}
+
+.plan-form__change-btn>input[type=checkbox]:checked+label {
+  background-color: blue;
+  color: #fff;
+}
+
+.plan-form__change-btn>input[type=checkbox]:checked+label::before {
+  left: 113px;
+}
+
+/* コメント一覧 */
+.coment-list {
+  max-width: 90%;
+}
+
+.card-body > p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 0.75em;
+}
+
+.likes {
+  display: inline-block;
 }

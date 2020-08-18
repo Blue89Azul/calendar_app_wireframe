@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>ワイヤフレーム02 | カレンダー画面</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/jquery.datetimepicker.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -418,56 +419,84 @@
         </div>
         <div class="card profile__info mb-0">
           <img class="profile__img-top" src="img/bg-img.jpg" focusable="false" role="img">
-            <rect width="100%" height="100%" fill="#868e96" />
+          <rect width="100%" height="100%" fill="#868e96" />
           <img class="profile__img" src="img/profile_acount.jpeg" alt="アカウント画像">
           <div class="card-body profilr__info-body">
             <h6 class="card-title">白い恋人</h6>
             <p>1991年11月22日</p>
             <a class="btn btn-success btn-sm" href="#">招待</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- 予定追加（モーダル） -->
-<div class="modal fade" id="modal__addPlan" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <button type="button" class="close btn__close text-right" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <form class="plan-form" action="#" method="post" enctype="multipart/form-data">
-        <div class="form-group col-11 mx-auto">
-          <input id="title" class="form-control text-center" type="text" name="title" value="" placeholder="予定タイトル">
+    <!-- 予定追加（モーダル） -->
+    <div class="modal fade" id="modal__addPlan" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <form class="plan-form" action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group col-12 px-0 plan-form__title">
+              <input class="form-control text-center" type="text" name="title" value="" placeholder="予定タイトル">
+            </div>
+            <div class="form-group d-flex justify-content-around mb-0">
+              <input id="datetimepicker" class="form-control col-5" type="text" name="" value="" placeholder="開始日付">
+              <p>:</p>
+              <input class="form-control col-5" type="text" name="" value="" placeholder="開始時刻">
+            </div>
+            <p class="text-center p-0 m-0">⇩</p>
+            <div class="form-group d-flex justify-content-around">
+              <input id="datetimepicker" class="form-control col-5" type="text" name="" value="" placeholder="終了日付">
+              <p>:</p>
+              <input class="form-control col-5" type="text" name="" value="" placeholder="終了時刻">
+            </div>
+            <div class="form-group">
+              <div class="plan-form__change-btn text-center">
+                <input id="datetimepicker" class="change-btn" type="checkbox" id="changebtn" name="changebtn" value="1">
+                <label id="datetimepicker" class="change-btn-label" for="changebtn">ADD PLAN</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="color-change form-control text-right" type="button" name="button"><span>色変更 </span>＞</button>
+            </div>
+          </form>
         </div>
-        <div class="form-group d-flex justify-content-around">
-          <input class="form-control col-5" type="text" name="" value="" placeholder="開始日付">
-          <p>:</p>
-          <input class="form-control col-5" type="text" name="" value="" placeholder="開始時刻">
-        </div>
-        <p class="text-center">⇩</p>
-        <div class="form-group d-flex justify-content-around">
-          <input class="form-control col-5"  type="text" name="" value="" placeholder="終了日付">
-          <p>:</p>
-          <input class="form-control col-5"  type="text" name="" value="" placeholder="終了時刻">
-        </div>
-        <div class="form-group">
-          <div class="form__change-btn mt-3 mb-2 mx-auto">
-            <input class="change-btn" type="checkbox" id="changebtn" name="changebtn" value="1">
-            <label class="change-btn-label" for="changebtn">ADD PLAN</label>
+      </div>
+    </div>
+    <div class="col-11 px-0 coment-list">
+      <div class=" card-group px-0">
+        <button type="button" class="close btn__close text-right" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="text-center mb-0">DONE FOR ME<span>2020.8</span></h5>
+        <div class="card">
+          <div class="card-body">
+            <p>8月1日</p>
+            <p><span>まりも</span> → <span>白い恋人</span></p>
+            <div class="likes">
+              <img src="img/like.png" alt="いいね">
+              <img src="img/like.png" alt="いいね">
+            </div>
+            <p>電話で、好きって言ってくれた！</p>
           </div>
         </div>
-        <div class="form-group">
-          <button class="form-control text-right" type="button" name="button">＞</button>
+        <div class="card">
+          <div class="card-body">
+            <p>8月17日</p>
+            <p><span>白い恋人</span> → <span>まりも</span></p>
+            <div class="likes">
+              <img src="img/like.png" alt="いいね">
+              <img src="img/like.png" alt="いいね">
+            </div>
+            <p>作ったご飯を褒めてくれた！</p>
+          </div>
         </div>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="/build/jquery.datetimepicker.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>

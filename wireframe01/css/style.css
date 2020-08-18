@@ -236,7 +236,7 @@ button {
 
 .form__change-btn>label {
   width: 100%;
-  height: 50px;
+  height: 30px;
   text-align: center;
   color: #fff;
   line-height: 2.5;
@@ -252,8 +252,8 @@ button {
 .form__change-btn>label::before {
   content: "";
   transition: all 0.3s;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   box-sizing: border-box;
   background-color: #fff;
@@ -264,11 +264,13 @@ button {
 }
 
 .form__change-btn>input[type=checkbox]+label {
-  background-color: red;
+  background-color: skyblue;
+  color: black;
 }
 
 .form__change-btn>input[type=checkbox]:checked+label {
   background-color: blue;
+  color: white;
 }
 
 .form__change-btn>input[type=checkbox]:checked+label::before {

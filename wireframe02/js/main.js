@@ -5,5 +5,4 @@ $(function(){
   $(".btn__close").on("click", function() {
     $(".profile").removeClass("open-profile");
   });
-
 });
