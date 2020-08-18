@@ -1,5 +1,5 @@
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 ul {
@@ -20,7 +20,7 @@ li {
 }
 
 .calendar__table {
-  height: 75vh;
+  height: 50vh;
   margin: 0;
 }
 
@@ -53,6 +53,11 @@ tr[class^="week"]>td>p {
   background-color: white;
 }
 
+.calendar__btn {
+  display: flex;
+  justify-content: center;
+}
+
 .btn__addPlan {
   height: 50px;
   width: 50px;
@@ -63,7 +68,7 @@ tr[class^="week"]>td>p {
 
 .btn__addPlan>span {
   display: block;
-  width: 22px;
+  width: 40px;
   height: 5px;
   background-color: #fff;
   border-radius: 10px;
@@ -71,11 +76,11 @@ tr[class^="week"]>td>p {
 }
 
 .btn__addPlan>span:nth-child(1) {
-  transform: rotateZ(90deg) translate(25%, -250%);
+  transform: rotateZ(90deg) translate(15%, -100%);
 }
 
 .btn__addPlan>span:nth-child(2) {
-  transform: translate(55%, -130%);
+  transform: translate(11%, -120%);
 }
 
 .btn__img {
@@ -86,5 +91,60 @@ tr[class^="week"]>td>p {
 
 .btn__img>p {
   font-size: 1px;
+  margin: 0;
+}
+
+/* プロフィール画面 */
+.profile {
+  width: 100%;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: all 0.7s;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+}
+
+.open-profile {
+  transition: all 0.7s;
+  transform: translateX(0);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile__info {
+  position: relative;
+  width: 100%;
+}
+
+.profile__img {
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 170px;
+  border: 3px double #fff;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profilr__info-body {
+  padding: 10px 0;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.profilr__info-body>h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.profilr__info-body>p {
+  font-size: 2px;
+  color: gray;
+  padding: 0;
   margin: 0;
 }
