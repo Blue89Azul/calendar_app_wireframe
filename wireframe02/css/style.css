@@ -1,0 +1,90 @@
+body {
+  overflow: hidden;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+/* カレンダーテーブル画面 */
+.calendar>h1 {
+  margin: 0 auto;
+  font-size: 2em;
+}
+
+.calendar__table {
+  height: 75vh;
+  margin: 0;
+}
+
+.calendar__weekdays {
+  text-align: center;
+  font-size: 0.5rem;
+}
+
+.calendar__weekdays>tr>th {
+  padding: 0 12px;
+}
+
+tr[class^="week"]>td {
+  padding: 0;
+}
+
+tr[class^="week"]>td>p {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.calendar__days {
+  font-size: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* カレンダーフッター部分 */
+.calendar__footer>div>button {
+  border: none;
+  background-color: white;
+}
+
+.btn__addPlan {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  margin-top: 5px;
+  border-radius: 25px;
+}
+
+.btn__addPlan>span {
+  display: block;
+  width: 22px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 7px 0;
+}
+
+.btn__addPlan>span:nth-child(1) {
+  transform: rotateZ(90deg) translate(25%, -250%);
+}
+
+.btn__addPlan>span:nth-child(2) {
+  transform: translate(55%, -130%);
+}
+
+.btn__img {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+}
+
+.btn__img>p {
+  font-size: 1px;
+  margin: 0;
+}
