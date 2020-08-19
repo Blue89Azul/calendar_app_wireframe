@@ -414,7 +414,7 @@
           <div class="card-body profilr__info-body">
             <h6 class="card-title">まりも</h6>
             <p>1992年11月09日</p>
-            <a class="btn btn-primary btn-sm" href="#">編集</a>
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal__edit">編集</button>
           </div>
         </div>
         <div class="card profile__info mb-0">
@@ -424,8 +424,53 @@
           <div class="card-body profilr__info-body">
             <h6 class="card-title">白い恋人</h6>
             <p>1991年11月22日</p>
-            <a class="btn btn-success btn-sm" href="#">招待</a>
+            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal__invitation">招待</button>
           </div>
+        </div>
+      </div>
+    </div>
+    <!-- プロフィール編集 -->
+    <div class="modal fade" id="modal__edit" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <form class="edit-form card" action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group col-12">
+              <input id="icon" type="file" name="edit-img" value="">
+              <label for="icon">
+                <img class="profile__img" src="img/profile_acount.jpeg" alt="アイコン画像（編集用）">
+              </label>
+              <input id="bg" type="file" name="edit-img" value="">
+              <label for="bg">
+                <img　class="card-img-top" src="img/bg-img.jpg" alt="背景画像（編集用）">
+              </label>
+            </div>
+            <div class="form-group col-12 card-body">
+              <label class="card-title" for="name">お名前</label>
+              <input id="name" class="edit-item" type="text" name="" value="">
+              <label class="card-title" for="birthday">誕生日</label>
+              <input id="birthday" class="edit-item" type="text" name="" value="">
+              <!-- 誕生日の箇所は、datepickerを実装する。 -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- 招待画面 -->
+    <div class="modal fade" id="modal__invitation" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5>パートナー招待</h5>
+          </div>
+          <form class="modal-body invitation-form" action="" method="post">
+            <div class="form-grop">
+              <textarea class="col-12" name="name" rows="8">招待文章(swiftMailerを使用。DBにある文章をここに反映。できれば修正可能に)</textarea>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="email" name="email" value="" placeholder="パートナーのアドレス">
+            </div>
+            <button class="btn btn-primary btn-sm col-12" type="button" name="button">送信</button>
+          </form>
         </div>
       </div>
     </div>
@@ -462,33 +507,33 @@
       </div>
     </div>
     <!-- コメント一覧（DONE FOR ME） -->
-    <div class="col-10 px-0 coment-list">
-        <button type="button" class="close btn__close-coment-list text-light" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h5 class="text-center mb-0">DONE FOR ME<span>2020.8</span></h5>
-        <div class="card col-11 mx-auto">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <p>8月1日</p>
-              <p><span>まりも</span> → <span>白い恋人</span></p>
-              <div class="likes">
-                <img src="img/like.png" alt="いいね">
-                <img src="img/like.png" alt="いいね">
-              </div>
-              <p class="main-coment text-center">電話で、好きって言ってくれた！</p>
-            </li>
-            <li class="list-group-item">
-              <p>8月17日</p>
-              <p><span>白い恋人</span> → <span>まりも</span></p>
-              <div class="likes">
-                <img src="img/like.png" alt="いいね">
-                <img src="img/like.png" alt="いいね">
-              </div>
-              <p class="main-coment text-center">作ったご飯を褒めてくれた！</p>
-            </li>
-          </ul>
-        </div>
+    <div class="col-10 px-0 coment-list bg-primary">
+      <button type="button" class="close btn__close-coment-list text-light" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h5 class="text-center mb-0">DONE FOR ME<span>2020.8</span></h5>
+      <div class="card col-11 mx-auto">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <p>8月1日</p>
+            <p><span>まりも</span> → <span>白い恋人</span></p>
+            <div class="likes">
+              <img src="img/like.png" alt="いいね">
+              <img src="img/like.png" alt="いいね">
+            </div>
+            <p class="main-coment text-center">電話で、好きって言ってくれた！</p>
+          </li>
+          <li class="list-group-item">
+            <p>8月17日</p>
+            <p><span>白い恋人</span> → <span>まりも</span></p>
+            <div class="likes">
+              <img src="img/like.png" alt="いいね">
+              <img src="img/like.png" alt="いいね">
+            </div>
+            <p class="main-coment text-center">作ったご飯を褒めてくれた！</p>
+          </li>
+        </ul>
+      </div>
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>

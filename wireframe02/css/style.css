@@ -222,7 +222,6 @@ tr[class^="week"]>td>p {
   overflow: hidden;
   top: 0;
   right: -100%;
-  background-color: blue;
   color: #fff;
   transition: all 0.7s;
 }
