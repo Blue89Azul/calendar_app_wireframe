@@ -404,7 +404,7 @@
     <!-- プロフィール部分 -->
     <div class="col-6 px-0 profile">
       <div class="col-12 card-group px-0">
-        <div class="profile-top bg-primary">
+        <div class="profile-top">
           <button type="button" class="close btn__close text-right" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -431,38 +431,37 @@
         </div>
       </div>
     </div>
-    <!-- プロフィール編集 -->
+    <!-- プロフィール編集（モーダル） -->
     <div class="modal fade" id="modal__edit" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <form class="edit-form card" action="#" method="post" enctype="multipart/form-data">
-            <div class="form-group col-12">
+        <div class="modal-content edit-content">
+          <form class="card edit-form" action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group col-12 icon-info">
               <input id="icon" type="file" name="edit-img" value="">
               <label for="icon">
-                <img class="profile__img" src="img/profile_acount.jpeg" alt="アイコン画像（編集用）">
+                <img class="profile__img edit-form__icon" src="img/profile_acount.jpeg" alt="アイコン画像（編集用）">
               </label>
               <input id="bg" type="file" name="edit-img" value="">
-              <label for="bg">
-                <img　class="card-img-top" src="img/bg-img.jpg" alt="背景画像（編集用）">
+              <label class="edit-form__bg" for="bg">
+                <img class="profile__img-top" src="img/bg-img.jpg" alt="背景画像（編集用）">
               </label>
             </div>
-            <div class="form-group col-12 card-body">
+            <div class="form-group card-body edit-form__items">
               <label class="card-title" for="name">お名前</label>
-              <input id="name" class="edit-item" type="text" name="" value="">
+              <input id="name" class="form-control col-11 mx-auto" type="text" name="" value="">
               <label class="card-title" for="birthday">誕生日</label>
-              <input id="birthday" class="edit-item" type="text" name="" value="">
-              <!-- 誕生日の箇所は、datepickerを実装する。 -->
+              <input id="birthday" class="form-control col-11 mx-auto" type="text" name="" value="">
             </div>
           </form>
         </div>
       </div>
     </div>
-    <!-- 招待画面 -->
+    <!-- 招待画面（モーダル） -->
     <div class="modal fade" id="modal__invitation" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5>パートナー招待</h5>
+            <h6>パートナー招待</h6>
           </div>
           <form class="modal-body invitation-form" action="" method="post">
             <div class="form-grop">
@@ -476,40 +475,78 @@
         </div>
       </div>
     </div>
-    <!-- 予定追加（モーダル） -->
+    <!-- 予定追加画面（モーダル） -->
     <div class="modal fade" id="modal__addPlan" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <form class="plan-form" action="#" method="post" enctype="multipart/form-data">
-            <div class="form-group col-12 px-0 plan-form__title">
-              <input class="form-control text-center" type="text" name="title" value="" placeholder="予定タイトル">
+            <div id="add-plan">
+              <div class="form-group col-12 px-0 plan-form__title">
+                <input class="form-control text-center plan-form__title" type="text" name="title" value="" placeholder="予定タイトル">
+              </div>
+              <div class="form-group d-flex justify-content-around mb-0 start-date">
+                <input id="datetimepicker" class="form-control col-5" type="text" name="" value="" placeholder="開始日付">
+                <p>:</p>
+                <input class="form-control col-5 start-date__time" type="text" name="" value="" placeholder="開始時刻">
+              </div>
+              <p class="text-center p-0 m-0">⇩</p>
+              <div class="form-group d-flex justify-content-around end-date">
+                <input id="datetimepicker" class="form-control col-5" type="text" name="" value="" placeholder="終了日付">
+                <p>:</p>
+                <input class="form-control col-5" type="text" name="" value="" placeholder="終了時刻">
+              </div>
             </div>
-            <div class="form-group d-flex justify-content-around mb-0">
-              <input id="datetimepicker" class="form-control col-5" type="text" name="" value="" placeholder="開始日付">
-              <p>:</p>
-              <input class="form-control col-5" type="text" name="" value="" placeholder="開始時刻">
-            </div>
-            <p class="text-center p-0 m-0">⇩</p>
-            <div class="form-group d-flex justify-content-around">
-              <input id="datetimepicker" class="form-control col-5" type="text" name="" value="" placeholder="終了日付">
-              <p>:</p>
-              <input class="form-control col-5" type="text" name="" value="" placeholder="終了時刻">
-            </div>
-            <div class="form-group">
-              <div class="plan-form__change-btn text-center">
-                <input id="datetimepicker" class="change-btn" type="checkbox" id="changebtn" name="changebtn" value="1">
-                <label id="datetimepicker" class="change-btn-label" for="changebtn">ADD PLAN</label>
+            <div id="done-for-us">
+              <div class="form-group">
+                <div class="form-group col-12 px-0 plan-form__title">
+                  <input class="form-control text-center plan-form__title" type="text" name="title" value="" placeholder="予定タイトル">
+                </div>
+                <div class="form-group">
+                  <input id="datetimepicker" class="form-control col-12" type="text" name="" value="" placeholder="日付">
+                </div>
               </div>
             </div>
             <div class="form-group">
-              <button class="color-change form-control text-right" type="button" name="button"><span>色変更 </span>＞</button>
+              <div class="plan-form__change-btn text-center">
+                <input class="change-btn" type="checkbox" id="changebtn" name="changebtn" value="1">
+                <label class="change-btn-label" for="changebtn">ADD PLAN</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="color-and-like-btn form-control text-right" type="button" name="button">色変更 ＞</button>
+              <div id="color" class="color-items color-items d-flex justify-content-around">
+                <input id="color-01" type="radio" name="color" value="">
+                <label class="red" for="color-01"></label>
+                <input id="color-02" type="radio" name="color" value="">
+                <label class="blue" for="color-02"></label>
+                <input id="color-03" type="radio" name="color" value="">
+                <label class="green" for="color-03"></label>
+              </div>
+              <div id="like" class="like-items color-items d-flex justify-content-around">
+                <input id="like-01" type="checkbox" name="like" value="">
+                <label for="like-01">
+                  <img src="img/like-btn.png" alt="いいね！">
+                </label>
+                <input id="like-02" type="checkbox" name="like" value="">
+                <label for="like-02">
+                  <img src="img/like-btn.png" alt="いいね！">
+                </label>
+                <input id="like-03" type="checkbox" name="like" value="">
+                <label for="like-03">
+                  <img src="img/like-btn.png" alt="いいね！">
+                </label>
+              </div>
+            </div>
+            </div>
+            <div class=" form-group mb-0">
+              <input class="btn btn-primary form-control" type="submit" name="" value="保存">
             </div>
           </form>
         </div>
       </div>
     </div>
     <!-- コメント一覧（DONE FOR ME） -->
-    <div class="col-10 px-0 coment-list bg-primary">
+    <div class="col-10 px-0 coment-list">
       <button type="button" class="close btn__close-coment-list text-light" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
