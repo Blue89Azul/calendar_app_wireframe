@@ -1,5 +1,5 @@
-body {
-  /* overflow: hidden; */
+.container-fluid {
+  overflow: hidden;
 }
 
 ul {
@@ -159,7 +159,7 @@ tr[class^="week"]>td>p {
   background-color: skyblue;
 }
 
-.plan-form__title > input[type=text]{
+.plan-form__title>input[type=text] {
   background: transparent;
 }
 
@@ -217,14 +217,48 @@ tr[class^="week"]>td>p {
 
 /* コメント一覧 */
 .coment-list {
-  max-width: 90%;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: blue;
+  color: #fff;
+  transform: translateX(100%);
+  transition: all 0.7s;
 }
 
-.card-body > p {
+.open-coment-list {
+  transition: all 0.7s;
+  transform: translateX(0);
+  box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.coment-list>.card {
+  color: #000;
+}
+
+.coment-list>h5 {
+  padding: 10px 0;
+}
+
+.list-group-item>p {
   display: inline-block;
+  font-size: 0.5em;
   margin: 0;
   padding: 0;
+}
+
+.list-group-item>p.main-coment {
+  display: inline-block;
   font-size: 0.75em;
+  padding: 5px;
+}
+
+.list-group-item {
+  padding: 0;
+  text-align: center;
 }
 
 .likes {
