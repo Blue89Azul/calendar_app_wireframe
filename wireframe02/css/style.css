@@ -114,6 +114,13 @@ tr[class^="week"]>td>p {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
+.profile-top>h6 {
+  font-weight: bold;
+  color: #fff;
+  padding: 15px;
+  margin: 0;
+}
+
 .profile__info {
   position: relative;
   width: 100%;
@@ -143,12 +150,13 @@ tr[class^="week"]>td>p {
 }
 
 .profilr__info-body>h6 {
+  font-size: 0.8em;
   padding: 0;
   margin: 0;
 }
 
 .profilr__info-body>p {
-  font-size: 2px;
+  font-size: 5px;
   color: gray;
   padding-bottom: 10px;
   margin: 0;
