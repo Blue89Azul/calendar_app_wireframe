@@ -1,4 +1,5 @@
-.calendar {
+.container-fluid {
+  position: relative;
   overflow: hidden;
 }
 
@@ -25,7 +26,9 @@ li {
 }
 
 .main-style__table {
-  height: 92%;
+  height: 80%;
+  position: absolute;
+  top: 50px;
   text-align: center;
   margin: 0;
 }
@@ -236,7 +239,7 @@ button {
 
 .form__change-btn>label {
   width: 100%;
-  height: 30px;
+  height: 50px;
   text-align: center;
   color: #fff;
   line-height: 2.5;
@@ -252,8 +255,8 @@ button {
 .form__change-btn>label::before {
   content: "";
   transition: all 0.3s;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   box-sizing: border-box;
   background-color: #fff;
