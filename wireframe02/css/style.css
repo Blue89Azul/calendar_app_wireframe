@@ -167,6 +167,7 @@ tr[class^="week"]>td>p {
 }
 
 /* 予定追加画面(モーダル) */
+.plan-form-content
 #add-plan {
   display: block;
 }
@@ -223,12 +224,12 @@ tr[class^="week"]>td>p {
 }
 
 .plan-form__change-btn>input[type=checkbox]+label {
-  background-color: skyblue;
+  background-color: white;
   color: #000;
 }
 
 .plan-form__change-btn>input[type=checkbox]:checked+label {
-  background-color: blue;
+  background-color: black;
   color: #fff;
 }
 
@@ -240,13 +241,22 @@ tr[class^="week"]>td>p {
 #like {
   display: none;
 }
+#color {
+  display: block;
+}
+
 .subform {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 .color-items>input[type="radio"] {
   display: none;
 }
-
+.like-items>input[type="checkbox"] {
+  display: none;
+}
+.like-items>input[type="checkbox"]+label {
+  opacity: 0.5;
+}
 input[type="radio"]+label {
   display: block;
   width: 50px;
@@ -254,7 +264,6 @@ input[type="radio"]+label {
   margin-top: 10px;
   top: 0;
   left: 0;
-
   border-radius: 50%;
 }
 
@@ -279,6 +288,10 @@ input[type="radio"]:checked+label.blue {
 input[type="radio"]:checked+label.green {
   background-color: green;
 }
+input[type="checkbox"]:checked+label {
+  opacity: 1;
+}
+
 .color-item {
   display: inline-block;
 }

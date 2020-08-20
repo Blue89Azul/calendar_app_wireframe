@@ -22,13 +22,15 @@ $(function() {
             $("#done-for-us").css("display", "block");
             $(".change-btn-label").html("DONE FOR ME");
             $(".color-and-like-btn").html("いいね！追加＞");
-            $(".color-and-like-btn").attr({"data-toggle":"modal", "data-target" :"#modal__likes"});
+            $("#like").css("display", "block");
+            $("#color").css("display", "none");
           } else {
             $("#add-plan").css("display", "block");
             $("#done-for-us").css("display", "none");
             $(".change-btn-label").html("ADD PLAN");
             $(".color-and-like-btn").html("色変更");
-            $(".color-and-like-btn").attr({"data-toggle":"modal", "data-target" :"#modal__colors"});
+            $("#like").css("display", "none");
+            $("#color").css("display", "block");
           }});
 
 
