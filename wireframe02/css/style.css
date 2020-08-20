@@ -296,7 +296,7 @@ input[type="checkbox"]:checked+label {
   display: inline-block;
 }
 
-/* プロフィール編集画面（モーダル） */
+/* アカウント編集画面（モーダル） */
 .edit-content {
   height: 50vh;
 }
@@ -341,7 +341,7 @@ input[type="checkbox"]:checked+label {
 
 .edit-form__items {
   position: absolute;
-  top: 50%;
+  top: 40%;
   padding: 0;
   margin: 0;
   width: 100%;
