@@ -391,7 +391,7 @@
         </button>
       </li>
       <li class="sub-item">
-        <button class="option-btn__coment-list btn-basic" type="button" name="button">
+        <button class="option-btn__coment-list btn-basic" type="button" name="button" data-toggle="modal" data-target="#modal__coment-list">
           コメント一覧
         </button>
         <!-- jQueryとの連携（したからfade in -->
@@ -550,32 +550,37 @@
       </div>
     </div>
     <!-- コメント一覧（DONE FOR ME） -->
-    <div class="col-10 px-0 coment-list">
-      <button type="button" class="close btn__close-coment-list text-light" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <h5 class="text-center mb-0">DONE FOR ME<span>2020.8</span></h5>
-      <div class="card col-11 mx-auto">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <p>8月1日</p>
-            <p><span>まりも</span> → <span>白い恋人</span></p>
-            <div class="likes">
-              <img src="img/like.png" alt="いいね">
-              <img src="img/like.png" alt="いいね">
+    <div class="modal fade" id="modal__coment-list" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header coment-list__header">
+            <h5>DONE FOR ME<span>2020.8</span></h5>
+          </div>
+          <div class="modal-body">
+            <div class="card col-11 mx-auto">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <p>8月1日</p>
+                  <p><span>まりも</span> → <span>白い恋人</span></p>
+                  <div class="likes">
+                    <img src="img/like.png" alt="いいね">
+                    <img src="img/like.png" alt="いいね">
+                  </div>
+                  <p class="main-coment text-center">電話で、好きって言ってくれた！</p>
+                </li>
+                <li class="list-group-item">
+                  <p>8月17日</p>
+                  <p><span>白い恋人</span> → <span>まりも</span></p>
+                  <div class="likes">
+                    <img src="img/like.png" alt="いいね">
+                    <img src="img/like.png" alt="いいね">
+                  </div>
+                  <p class="main-coment text-center">作ったご飯を褒めてくれた！</p>
+                </li>
+              </ul>
             </div>
-            <p class="main-coment text-center">電話で、好きって言ってくれた！</p>
-          </li>
-          <li class="list-group-item">
-            <p>8月17日</p>
-            <p><span>白い恋人</span> → <span>まりも</span></p>
-            <div class="likes">
-              <img src="img/like.png" alt="いいね">
-              <img src="img/like.png" alt="いいね">
-            </div>
-            <p class="main-coment text-center">作ったご飯を褒めてくれた！</p>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -24,6 +24,7 @@ li {
 .calendar__table {
   height: 80vh;
   margin: 0;
+  position: relative;
   overflow: hidden;
 }
 
@@ -85,6 +86,7 @@ tr[class^="week"]>td>p {
   margin-left: 5px;
   background-image: url("../img/calendar-icon.png");
   background-position: center;
+  background-color: white;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   background-repeat: no-repeat;
 }
@@ -98,9 +100,18 @@ tr[class^="week"]>td>p {
   margin-left: 5px;
   border-radius: 50%;
   background-image: url("../img/coment-list-icon.png");
+  background-color: white;
   background-position: center;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   background-repeat: no-repeat;
+}
+
+.option-btn__coment-list {
+  background: transparent;
+}
+
+.option-btn__add-plan {
+  background: transparent;
 }
 
 .option-btn__main {
@@ -143,6 +154,8 @@ tr[class^="week"]>td>p {
   display: block;
   position: absolute;
   border: 3px solid gray;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   top: 5px;
   left: 10px;
@@ -211,13 +224,13 @@ tr[class^="week"]>td>p {
 }
 
 .profilr__info-body>h6 {
-  font-size: 0.8em;
+  font-size: 1em;
   padding: 0;
   margin: 0;
 }
 
 .profilr__info-body>p {
-  font-size: 5px;
+  font-size: 15px;
   color: gray;
   padding-bottom: 10px;
   margin: 0;
@@ -434,6 +447,18 @@ input[type="checkbox"]:checked+label {
 }
 
 /* コメント一覧 */
+.modal-header>h5 {
+  margin: 0 auto;
+  line-height: 3;
+  color: white;
+}
+
+.modal-header>h5>span {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 0.75em;
+}
+
 .coment-list {
   height: 82vh;
   position: absolute;
