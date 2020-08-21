@@ -22,7 +22,7 @@ li {
 }
 
 .calendar__table {
-  height: 80vh;
+  height: 75vh;
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -87,7 +87,7 @@ tr[class^="week"]>td>p {
   background-image: url("../img/calendar-icon.png");
   background-position: center;
   background-color: white;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
   background-repeat: no-repeat;
 }
 
@@ -102,7 +102,7 @@ tr[class^="week"]>td>p {
   background-image: url("../img/coment-list-icon.png");
   background-color: white;
   background-position: center;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
   background-repeat: no-repeat;
 }
 
