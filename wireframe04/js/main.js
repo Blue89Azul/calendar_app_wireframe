@@ -33,7 +33,7 @@ $(function() {
     } else {
       $("#add-plan").css("display", "block");
       $("#done-for-us").css("display", "none");
-      $(".change-btn-label").html("ADD PLAN");
+      $(".change-btn-label").html("よていついか");
       $(".color-and-like-btn").html("いろへんこう");
       $("#like").css("display", "none");
       $("#color").css("display", "block");

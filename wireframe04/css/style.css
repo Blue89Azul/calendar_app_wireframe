@@ -1,7 +1,7 @@
 .container-fluid {
   width: 100%;
   height: 100vh;
-  background-color: #00B0FF;
+  background-color: #A7D1E8;
   position: relative;
   overflow: hidden;
   font-family: 'Indie Flower', "Nico Moji";
@@ -10,7 +10,6 @@
 .coment-font {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
-
 
 .btn-color {
   background-color: #FDCC0D;
@@ -29,10 +28,11 @@
   height: 100%;
   display: block;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   background-color: black;
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 ul {
@@ -48,9 +48,9 @@ li {
 
 /* カレンダーテーブル画面 */
 .calendar {
-  color: #E1BEE7;
+  color: #FDD2D2;
   justify-content: center;
-  text-shadow: 1px 1px 0 #DFDED4;
+  text-shadow: 1px 1px 0 #fff;
 }
 
 .calendar-date {
@@ -142,7 +142,7 @@ tr[class^="week"]>td>p {
 /* カレンダーフッター部分 */
 .btn-basic {
   border: none;
-  color: #F06292;
+  color: #FDD2D2;
   background-color: white;
   padding: 0;
 }
@@ -150,6 +150,7 @@ tr[class^="week"]>td>p {
 .option-btn-items {
   display: block;
   position: absolute;
+  z-index: 10;
   bottom: 90px;
   right: 15px;
 }
@@ -278,6 +279,7 @@ tr[class^="week"]>td>p {
   transition: all 0.7s;
   display: block;
   position: absolute;
+  z-index: 2;
   top: 0;
   left: -100%;
 }
@@ -289,7 +291,7 @@ tr[class^="week"]>td>p {
 }
 
 .profile-top {
-  background-color: #00B0FF;
+  background-color: #A7D1E8;
 }
 
 .profile-top>h6 {
@@ -350,7 +352,7 @@ tr[class^="week"]>td>p {
 }
 
 .plan-form__title {
-  background-color: #00B0FF;
+  background-color: #A7D1E8;
 }
 
 .plan-form__title>input[type=text] {
@@ -537,7 +539,7 @@ input[type="checkbox"]:checked+label {
 .modal-header {
   position: relative;
   height: 10vh;
-  background-color: #00B0FF;
+  background-color: #A7D1E8;
   padding: 0;
 }
 
