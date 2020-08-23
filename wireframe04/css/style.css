@@ -147,7 +147,7 @@ tr[class^="week"]>td>p {
 .option-btn-items {
   display: block;
   position: absolute;
-  bottom: 105px;
+  bottom: 90px;
   right: 15px;
 }
 
