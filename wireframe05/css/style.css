@@ -191,8 +191,10 @@ tr[class^="week"]>td>p {
 
 .calendar-footer>p {
   display: inline-block;
-  height: 100%;
-  padding: 15px 0 15px 10px;
+  margin-left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   letter-spacing: 2px;
 }
 
