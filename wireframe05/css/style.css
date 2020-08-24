@@ -499,6 +499,8 @@ input[type="checkbox"]:checked+label {
 
 .modal-header>h5 {
   position: absolute;
+  text-align: center;
+  width: 100%;
   top: 50%;
   left: 50%;
   letter-spacing: 2px;
@@ -509,23 +511,13 @@ input[type="checkbox"]:checked+label {
 
 /* コメント一覧 */
 .modal-header>h5>span {
+  font-size: 15px;
   display: inline-block;
   margin-left: 10px;
-  font-size: 0.75em;
-}
-
-.open-coment-list {
-  transition: all 0.7s;
-  right: 0;
-  box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .coment-list>.card {
   color: #000;
-}
-
-.coment-list>h5 {
-  padding: 10px 0;
 }
 
 .list-group-item>p {
