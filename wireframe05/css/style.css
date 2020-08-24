@@ -56,7 +56,34 @@ li {
 }
 
 .calendar-title {
+  text-align: center;
   color: #617129;
+}
+
+.arrow-pre {
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border: 10px solid transparent;
+  border-right: 10px solid #9A3325;
+}
+
+.arrow-next {
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border: 10px solid transparent;
+  border-left: 10px solid #9A3325;
+}
+
+.calendar-title>span {
+  display: block;
 }
 
 .album>input[type="file"] {
@@ -105,8 +132,8 @@ li {
 
 .calendar__weekdays {
   width: 95%;
-  border-top: 3px solid #E1BEE7;
-  border-bottom: 3px solid #E1BEE7;
+  border-top: 3px solid #9A3325;
+  border-bottom: 3px solid #9A3325;
   text-align: center;
   font-size: 0.5rem;
 }
@@ -140,6 +167,14 @@ tr[class^="week"]>td>p {
 }
 
 /* カレンダーフッター部分 */
+.calendar-footer {
+  width: 100%;
+  height: 5vh;
+  color: #fff;
+  text-shadow: 1px 1px 0 #A8AD00;
+  background-color: #9A3325;
+}
+
 .btn-basic {
   border: none;
   color: #FDD2D2;
@@ -177,8 +212,8 @@ tr[class^="week"]>td>p {
   content: "";
   display: inline-block;
   vertical-align: middle;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   margin-left: 5px;
   background-image: url("../img/profile.jpeg");
@@ -192,8 +227,8 @@ tr[class^="week"]>td>p {
   content: "";
   display: inline-block;
   vertical-align: middle;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   margin-left: 5px;
   background-image: url("../img/calendar-icon.png");
@@ -228,38 +263,6 @@ tr[class^="week"]>td>p {
 
 .option-btn__add-plan {
   background: transparent;
-}
-
-.option-btn__main {
-  display: block;
-  height: 50px;
-  width: 50px;
-  background-color: #F06292;
-  padding: 0;
-  margin-top: 5px;
-  border-radius: 25px;
-  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
-}
-
-.option-btn__main>span {
-  display: block;
-  width: 40px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 10px;
-  margin: 7px 0;
-}
-
-.option-btn__main:active>span {
-  transform: rotateZ(45deg);
-}
-
-.option-btn__main>span:nth-child(1) {
-  transform: rotateZ(90deg) translate(15%, -100%);
-}
-
-.option-btn__main>span:nth-child(2) {
-  transform: translate(11%, -120%);
 }
 
 .btn__img {
