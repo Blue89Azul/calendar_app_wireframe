@@ -26,15 +26,13 @@ $(function() {
     if (flg == true) {
       $("#add-plan").css("display", "none");
       $("#done-for-us").css("display", "block");
-      $(".change-btn-label").html("こめんとたち");
-      $(".color-and-like-btn").html("いいね！ついか");
+      $(".change-btn-label").html("DONE FOR US");
       $("#like").css("display", "block");
       $("#color").css("display", "none");
     } else {
       $("#add-plan").css("display", "block");
       $("#done-for-us").css("display", "none");
-      $(".change-btn-label").html("よていついか");
-      $(".color-and-like-btn").html("いろへんこう");
+      $(".change-btn-label").html("ADD PLAN");
       $("#like").css("display", "none");
       $("#color").css("display", "block");
     }
