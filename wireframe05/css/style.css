@@ -145,7 +145,6 @@ li {
 
 .calendar__weekdays {
   width: 95%;
-  /* border-top: 3px solid #9A3325; */
   border-bottom: 3px solid #9A3325;
   text-align: center;
   font-size: 0.5rem;
@@ -164,7 +163,7 @@ li {
 tr[class^="week"]>td {
   text-align: center;
   vertical-align: middle;
-  font-size: 25px;
+  font-size: 20px;
   margin: 0;
   padding: 0;
 }
@@ -182,7 +181,7 @@ tr[class^="week"]>td>p {
 /* カレンダーフッター部分 */
 .calendar-footer {
   width: 100%;
-  height: 6vh;
+  height: 10vh;
   position: relative;
   color: #fff;
   text-shadow: 1px 1px 0 #A8AD00;
@@ -190,8 +189,10 @@ tr[class^="week"]>td>p {
 }
 
 .calendar-footer > p {
-  margin: 0 0 0 5px;
-  line-height: 2.5;
+  display: inline-block;
+  height: 100%;
+  /* font-size: 10px; */
+  padding: 20px 0 20px 10px;
   letter-spacing: 2px;
 }
 
@@ -204,8 +205,8 @@ tr[class^="week"]>td>p {
 }
 
 .option-btns>button {
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
   border: none;
   padding: 0;
   border-radius: 50%;
