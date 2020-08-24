@@ -9,6 +9,7 @@
 
 .btn-color {
   background-color: #9A3325;
+  color: white;
   border: none;
 }
 
@@ -188,14 +189,12 @@ tr[class^="week"]>td>p {
   background-color: #9A3325;
 }
 
-.calendar-footer > p {
+.calendar-footer>p {
   display: inline-block;
   height: 100%;
-  /* font-size: 10px; */
-  padding: 20px 0 20px 10px;
+  padding: 15px 0 15px 10px;
   letter-spacing: 2px;
 }
-
 
 .option-btns {
   position: absolute;
@@ -243,12 +242,12 @@ tr[class^="week"]>td>p {
 }
 
 .profile-top {
-  background-color: #A7D1E8;
+  background-color: #E3E1DB;
+  color: #000;
 }
 
 .profile-top>h6 {
   font-weight: bold;
-  color: #fff;
   padding: 15px;
   margin: 0;
 }
@@ -304,7 +303,7 @@ tr[class^="week"]>td>p {
 }
 
 .plan-form__title {
-  background-color: #A7D1E8;
+  background-color: #E3E1DB;
 }
 
 .plan-form__title>input[type=text] {
@@ -491,42 +490,26 @@ input[type="checkbox"]:checked+label {
 .modal-header {
   position: relative;
   height: 10vh;
-  background-color: #A7D1E8;
+  background-color: #E3E1DB;
+  color: #000;
   padding: 0;
 }
 
-.modal-header>h6 {
+.modal-header>h5 {
   position: absolute;
   top: 50%;
   left: 50%;
+  letter-spacing: 2px;
   transform: translate(-50%, -50%);
   font-weight: bold;
-  color: #fff;
   padding: 0;
 }
 
 /* コメント一覧 */
-.modal-header>h5 {
-  margin: 0 auto;
-  line-height: 3;
-  color: white;
-}
-
 .modal-header>h5>span {
   display: inline-block;
   margin-left: 10px;
   font-size: 0.75em;
-}
-
-.coment-list {
-  height: 82vh;
-  position: absolute;
-  overflow: hidden;
-  background-color: skyblue;
-  top: 0;
-  right: -100%;
-  color: #fff;
-  transition: all 0.7s;
 }
 
 .open-coment-list {
