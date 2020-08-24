@@ -4,7 +4,7 @@
   background-color: #E3E1DB;
   position: relative;
   overflow: hidden;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .btn-color {
@@ -45,7 +45,6 @@ li {
 /* カレンダーテーブル画面 */
 .calendar {
   color: #A8AD00;
-  font-family: 'Indie Flower', cursive;
   justify-content: center;
   text-shadow: 1px 1px 0 #fff;
 }
@@ -53,10 +52,10 @@ li {
 .calendar-date {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.calendar-title{
+.calendar-title {
   color: #617129;
 }
 
