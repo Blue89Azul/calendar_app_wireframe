@@ -189,17 +189,17 @@
     <ul class="option-btn-items">
       <li class="sub-item">
         <button class="option-btn__acount btn-basic" type="button" name="button">
-          あかうんと
+          アカウント
         </button>
       </li>
       <li class="sub-item">
         <button class="option-btn__add-plan btn-basic" type="button" name="button" data-toggle="modal" data-target="#modal__addPlan">
-          よていついか
+          予定追加
         </button>
       </li>
       <li class="sub-item">
         <button class="option-btn__coment-list btn-basic" type="button" name="button" data-toggle="modal" data-target="#modal__coment-list">
-          こめんとたち
+          DONE FOR US
         </button>
         <!-- jQueryとの連携（したからfade in -->
       </li>
@@ -217,15 +217,15 @@
           <button type="button" class="close btn__close text-right" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h6 class="text-center">あかうんと</h6>
+          <h6 class="text-center">アカウント</h6>
         </div>
         <div class="card profile__info mb-0">
           <img class="profile__img-top" src="img/bg-img.jpg" focusable="false" role="img">
           <img class="profile__img" src="img/profile_acount.jpeg" alt="アカウント画像">
           <div class="card-body profilr__info-body">
             <h6 class="card-title">まりも</h6>
-            <p>1992ねん11がつ09にち</p>
-            <button type="button" class="btn-color btn-sm" data-toggle="modal" data-target="#modal__edit">へんしゅう</button>
+            <p>1992年11月09日</p>
+            <button type="button" class="btn-color btn-sm" data-toggle="modal" data-target="#modal__edit">編集</button>
           </div>
         </div>
         <div class="card profile__info mb-0">
@@ -234,8 +234,8 @@
           <img class="profile__img" src="img/profile_acount.jpeg" alt="アカウント画像">
           <div class="card-body profilr__info-body">
             <h6 class="card-title">くまモン</h6>
-            <p>1991がつ11がつ22にち</p>
-            <button type="button" class="btn-color btn-sm" data-toggle="modal" data-target="#modal__invitation">しょうたい</button>
+            <p>1991年11月22日</p>
+            <button type="button" class="btn-color btn-sm" data-toggle="modal" data-target="#modal__invitation">招待</button>
           </div>
         </div>
       </div>
@@ -256,9 +256,9 @@
               </label>
             </div>
             <div class="form-group card-body edit-form__items">
-              <label class="card-title" for="name">なまえ</label>
+              <label class="card-title" for="name">名前</label>
               <input id="name" class="form-control col-11 mx-auto" type="text" name="" value="">
-              <label class="card-title" for="birthday">たんじょうび</label>
+              <label class="card-title" for="birthday">誕生日</label>
               <input id="birthday" class="form-control col-11 mx-auto" type="date" name="" value="">
             </div>
           </form>
@@ -274,12 +274,12 @@
           </div>
           <form class="modal-body invitation-form" action="" method="post">
             <div class="form-grop">
-              <textarea class="col-12 coment-font" name="name" rows="8">招待文章(swiftMailerを使用。DBにある文章をここに反映。できれば修正可能に)</textarea>
+              <textarea class="col-12 " name="name" rows="8">招待文章(swiftMailerを使用。DBにある文章をここに反映。できれば修正可能に)</textarea>
             </div>
             <div class="form-group">
               <input class="form-control" type="email" name="email" value="" placeholder="パートナーのアドレス">
             </div>
-            <button class="btn-color btn-sm col-12" type="button" name="button">そうしん</button>
+            <button class="btn-color btn-sm col-12" type="button" name="button">送信</button>
           </form>
         </div>
       </div>
@@ -291,24 +291,24 @@
           <form class="plan-form" action="#" method="post" enctype="multipart/form-data">
             <div id="add-plan">
               <div class="form-group col-12 px-0 plan-form__title">
-                <input class="form-control text-center plan-form__title" type="text" name="title" value="" placeholder="よていたいとる">
+                <input class="form-control text-center plan-form__title" type="text" name="title" value="" placeholder="予定タイトル">
               </div>
               <div class="form-group d-flex justify-content-around mb-0 start-date">
-                <input id="datetimepicker" class="form-control col-5" type="date" name="" value="" placeholder="はじまりねんげつ">
+                <input id="datetimepicker" class="form-control col-5" type="date" name="" value="" placeholder="開始日付">
                 <p>:</p>
-                <input class="form-control col-5 start-date__time" type="time" name="" value="" placeholder="はじまりじかん">
+                <input class="form-control col-5 start-date__time" type="time" name="" value="" placeholder="開始時刻">
               </div>
               <p class="text-center p-0 m-0">⇩</p>
               <div class="form-group d-flex justify-content-around end-date">
-                <input id="datetimepicker" class="form-control col-5" type="date" name="" value="" placeholder="おわりねんげつ">
+                <input id="datetimepicker" class="form-control col-5" type="date" name="" value="" placeholder="終了日付">
                 <p>:</p>
-                <input class="form-control col-5" type="time" name="" value="" placeholder="おわりじかん">
+                <input class="form-control col-5" type="time" name="" value="" placeholder="終了時刻">
               </div>
             </div>
             <div id="done-for-us">
               <div class="form-group">
                 <div class="form-group col-12 px-0 plan-form__title">
-                  <input class="form-control text-center plan-form__title" type="text" name="title" value="" placeholder="こめんとたいとる">
+                  <input class="form-control text-center plan-form__title" type="text" name="title" value="" placeholder="コメントタイトル">
                 </div>
                 <div class="form-group">
                   <input id="datetimepicker" class="form-control col-12" type="date" name="" value="" placeholder="日付">
@@ -318,7 +318,7 @@
             <div class="form-group">
               <div class="plan-form__change-btn text-center">
                 <input class="change-btn" type="checkbox" id="changebtn" name="changebtn" value="1">
-                <label class="change-btn-label" for="changebtn">よていついか</label>
+                <label class="change-btn-label" for="changebtn">ADD PLAN</label>
               </div>
             </div>
             <!-- 予定追加・色変更 -->
@@ -361,28 +361,28 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header coment-list__header">
-            <h5>こめんとたち<span>2020.8</span></h5>
+            <h5>DONE FOR US<span>2020.8</span></h5>
           </div>
           <div class="modal-body">
             <div class="card col-11 mx-auto">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
-                  <p>8がつ1にち</p>
+                  <p>8月1日</p>
                   <p><span>まりも</span> → <span>くまモン</span></p>
                   <div class="likes">
                     <img src="img/like.png" alt="いいね">
                     <img src="img/like.png" alt="いいね">
                   </div>
-                  <p class="main-coment coment-font text-center">電話で、好きって言ってくれた！</p>
+                  <p class="main-coment text-center">電話で、好きって言ってくれた！</p>
                 </li>
                 <li class="list-group-item">
-                  <p>8がつ17にち</p>
+                  <p>8月17日</p>
                   <p><span>くまモン</span> → <span>まりも</span></p>
                   <div class="likes">
                     <img src="img/like.png" alt="いいね">
                     <img src="img/like.png" alt="いいね">
                   </div>
-                  <p class="main-coment coment-font text-center">作ったご飯を褒めてくれた！</p>
+                  <p class="main-coment text-center">作ったご飯を褒めてくれた！</p>
                 </li>
               </ul>
             </div>

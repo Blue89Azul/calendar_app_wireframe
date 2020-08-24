@@ -4,12 +4,10 @@
   background-color: #A7D1E8;
   position: relative;
   overflow: hidden;
-  font-family: 'Indie Flower', "Nico Moji";
-}
-
-.coment-font {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
+
 
 .btn-color {
   background-color: #FDCC0D;
@@ -48,7 +46,8 @@ li {
 
 /* カレンダーテーブル画面 */
 .calendar {
-  color: #FDD2D2;
+  color: #F06292;
+  font-family: 'Indie Flower', cursive;
   justify-content: center;
   text-shadow: 1px 1px 0 #fff;
 }
