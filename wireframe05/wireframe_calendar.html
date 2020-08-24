@@ -20,22 +20,26 @@
     <!-- カレンダー部分 -->
     <div class="row calendar">
       <div class="calendar-date">
-        <form class="album" action="#" method="post" enctype="multipart/form-data">
+        <form class="header-option col-3 album" action="#" method="post" enctype="multipart/form-data">
           <input id="album" type="file" name="" value="">
-          <label for="album">
+          <label class="header-option__btn" for="album">
             <img src="img/camara.png" alt="今月の一枚">
           </label>
           <div class="month-img">
           </div>
         </form>
-        <div class="arrow-pre"></div>
-        <div class="calnedar-tile">
-          <span>2020</span>
-          <h1>8</h1>
-          <span>Agosto</span>
+        <div class="col-6 calendar-title">
+            <div class="arrow-pre"></div>
+              <h1 class="this-month">
+                <span>2020</span>
+                <span>8</span>
+                <span>Agosto</span>
+              </h1>
+            <div class="arrow-next"></div>
         </div>
-        <div class="arrow-next"></div>
-        <a href="#">HOY</a>
+        <div class="col-3 header-option">
+          <button class="header-option__btn" type="button" name="button">HOY</button>
+        </div>
       </div>
       <table class="calendar__table">
         <thead class="calendar__weekdays">
@@ -195,9 +199,15 @@
       <div class="calendar-footer">
         <p>19 de Agosto</p>
         <div class="option-btns">
-          <button class="option-btn__acount btn-basic" type="button" name="button"></button>
-          <button class="option-btn__add-plan btn-basic" type="button" name="button" data-toggle="modal" data-target="#modal__addPlan"></button>
-          <button class="option-btn__coment-list btn-basic" type="button" name="button" data-toggle="modal" data-target="#modal__coment-list"></button>
+          <button class="option-btn__acount " type="button" name="button">
+            <img src="img/profile.jpeg" alt="">
+          </button>
+          <button class="option-btn__add-plan " type="button" name="button" data-toggle="modal" data-target="#modal__addPlan">
+            <img src="img/calendar-icon.png" alt="">
+          </button>
+          <button class="option-btn__coment-list " type="button" name="button" data-toggle="modal" data-target="#modal__coment-list">
+            <img src="img/coment-list-icon.png" alt="">
+          </button>
         </div>
       </div>
     </div>

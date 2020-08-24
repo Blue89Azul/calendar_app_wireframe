@@ -51,39 +51,67 @@ li {
 
 .calendar-date {
   width: 100%;
+  height: 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .calendar-title {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.this-month {
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
   text-align: center;
+  letter-spacing: 2px;
+  padding: 1px 0;
   color: #617129;
+}
+
+.this-month>span {
+  display: block;
+}
+
+.this-month>span:nth-child(2) {
+  font-size: 2.5em;
 }
 
 .arrow-pre {
   display: block;
-  margin: auto;
-  box-sizing: border-box;
-  vertical-align: middle;
   width: 10px;
   height: 10px;
+  margin-right: 20px;
+  box-sizing: border-box;
   border: 10px solid transparent;
   border-right: 10px solid #9A3325;
 }
 
 .arrow-next {
   display: block;
-  margin: auto;
-  box-sizing: border-box;
-  vertical-align: middle;
   width: 10px;
   height: 10px;
+  margin-left: 20px;
+  box-sizing: border-box;
   border: 10px solid transparent;
   border-left: 10px solid #9A3325;
 }
 
-.calendar-title>span {
+.header-option {
   display: block;
+  position: relative;
+}
+
+.header-option__btn {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .album>input[type="file"] {
@@ -105,21 +133,6 @@ li {
   background-color: transparent;
 }
 
-.calendar-date>h1 {
-  width: 50%;
-  margin: 0;
-  color: #F06292;
-  text-shadow: 1px 1px 0 #DFDED4;
-  padding: 0;
-  margin-left: 10px;
-  font-size: 35px;
-}
-
-.calendar-date>h1>span {
-  display: inline-block;
-  font-size: 15px;
-}
-
 .calendar__table {
   width: 100%;
   max-width: 100%;
@@ -132,7 +145,7 @@ li {
 
 .calendar__weekdays {
   width: 95%;
-  border-top: 3px solid #9A3325;
+  /* border-top: 3px solid #9A3325; */
   border-bottom: 3px solid #9A3325;
   text-align: center;
   font-size: 0.5rem;
@@ -169,109 +182,44 @@ tr[class^="week"]>td>p {
 /* カレンダーフッター部分 */
 .calendar-footer {
   width: 100%;
-  height: 5vh;
+  height: 6vh;
+  position: relative;
   color: #fff;
   text-shadow: 1px 1px 0 #A8AD00;
   background-color: #9A3325;
 }
 
-.btn-basic {
-  border: none;
-  color: #FDD2D2;
-  background-color: white;
-  padding: 0;
+.calendar-footer > p {
+  margin: 0 0 0 5px;
+  line-height: 2.5;
+  letter-spacing: 2px;
 }
 
-.option-btn-items {
-  display: block;
+
+.option-btns {
   position: absolute;
-  z-index: 10;
-  bottom: 90px;
-  right: 15px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.option-btn-items>.sub-item {
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.option-btn-items>li {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
-}
-
-.option-btn-items>li:not(.main-item) {
-  text-align: right;
-  display: none;
-}
-
-.option-btn__acount::after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-left: 5px;
-  background-image: url("../img/profile.jpeg");
-  background-position: center;
-  background-color: white;
-  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
-  background-repeat: no-repeat;
-}
-
-.option-btn__add-plan::after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-left: 5px;
-  background-image: url("../img/calendar-icon.png");
-  background-position: center;
-  background-color: white;
-  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
-  background-repeat: no-repeat;
-}
-
-.option-btn__coment-list::after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  margin-left: 5px;
-  border-radius: 50%;
-  background-image: url("../img/coment-list-icon.png");
-  background-color: white;
-  background-position: center;
-  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
-  background-repeat: no-repeat;
-}
-
-.option-btn__acount {
-  background: transparent;
-}
-
-.option-btn__coment-list {
-  background: transparent;
-}
-
-.option-btn__add-plan {
-  background: transparent;
-}
-
-.btn__img {
+.option-btns>button {
+  height: 35px;
+  width: 35px;
+  border: none;
   padding: 0;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-color: #fff;
 }
 
-.btn__img>p {
-  font-size: 1px;
-  margin: 0;
+.option-btns>button:last-child {
+  margin-right: 5px;
+}
+
+.option-btns>button>img {
+  width: 65%;
+  height: 65%;
 }
 
 /* プロフィール一覧画面 */
