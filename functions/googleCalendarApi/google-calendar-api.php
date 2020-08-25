@@ -1,5 +1,5 @@
 <?php
-$api_key = "AIzaSyAgPogpsvPDZpQZN4T9MzwP48R8vmc5Vjg";
+$api_key = "";
 $calendar_id = urlencode('japanese__ja@holiday.calendar.google.com');
 $start = date('2020-01-01\T00:00:00\Z');
 $end = date('2020-12-31\T00:00:00\Z');
