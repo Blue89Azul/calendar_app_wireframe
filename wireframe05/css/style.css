@@ -179,6 +179,30 @@ tr[class^="week"]>td>p {
   font-size: 0.5rem;
 }
 
+.calendar__days>.week>td {
+  position: relative;
+}
+
+.calendar__days>.week>td>span {
+  display: inline-block;
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.calendar__days>.week>td>span:nth-child(2) {
+  transform: translate(-50% -50%);
+  left: 50%;
+}
+
+.calendar__days>.week>td>span:nth-child(3) {
+  left: 70%;
+}
+
 /* カレンダーフッター部分 */
 .calendar-footer {
   width: 100%;
