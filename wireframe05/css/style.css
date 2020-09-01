@@ -7,6 +7,10 @@
   font-family: 'Abril Fatface', cursive;
 }
 
+#add-plan>input[type='title'] {
+  display: none;
+}
+
 .btn-color {
   background-color: #9A3325;
   color: white;
@@ -248,6 +252,55 @@ tr[class^="week"]>td>p {
   height: 65%;
 }
 
+.plan-list {
+  width: 100%;
+  height: 25vh;
+  overflow: scroll;
+  display: none;
+  background-color: #fff;
+}
+
+.plan-list-items {
+  width: 95%;
+  height: 40px;
+  padding: 5px 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.plan-list-items>span {
+  width: 13px;
+  height: 13px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.plan-list-items>p {
+  margin: 0 0 0 10px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.plan-list-items>.plan-list-items__time {
+  margin-left: 5px;
+  height: 100%;
+}
+
+.plan-list-items>.plan-list-items__time>p {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+.plan-list-items>.plan-list-items__time>p {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
 /* プロフィール一覧画面 */
 .profile {
   width: 100%;
@@ -407,11 +460,17 @@ tr[class^="week"]>td>p {
   display: none;
 }
 
-.like-items>input[type="checkbox"] {
+.like-items {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.like-items>input[type="radio"] {
   display: none;
 }
 
-.like-items>input[type="checkbox"]+label {
+.like-items>input[type="radio"]+label {
   opacity: 0.5;
 }
 
@@ -449,7 +508,7 @@ input[type="radio"]:checked+label.green {
   background-color: #579779;
 }
 
-input[type="checkbox"]:checked+label {
+input[type="radio"]:checked~label {
   opacity: 1;
 }
 
