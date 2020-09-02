@@ -38,5 +38,18 @@ $(function() {
     }
   });
 
+  // 今月の一枚
+  $("body").append('<div class="gray-layer"></div><div class="over-layer"></div>');
+  $(".gray-layer").click(function() {
+    $(this).hide();
+    $(".over-layer").hide();
+  });
+
+  $("a.modal-img").click(function() {
+    $(".gray-layer").show();
+    $(".over-layer").show().html("<img src='" + $(this).attr("href") + "'>");
+    return false;
+  });
+
 
 });

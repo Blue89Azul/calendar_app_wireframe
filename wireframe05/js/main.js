@@ -29,16 +29,4 @@ $(function() {
     }
   });
 
-  // 予定一覧
-  $(".week > td").on("click", function() {
-    $(".calendar__table").css("height", "40vh");
-    $(this).css("border", "solid 1px orange");
-    $(".plan-list").css("display", "block");
-  });
-  $(".calendar-footer").on("click", function() {
-    $(".calendar__table").css("height", "65vh");
-    $(".week > td").css("border", "none");
-    $(".plan-list").css("display", "none");;
-  });
-
 });
