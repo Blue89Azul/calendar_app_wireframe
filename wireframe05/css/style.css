@@ -207,6 +207,18 @@ tr[class^="week"]>td>p {
   left: 70%;
 }
 
+.holiday {
+  display: block;
+  position: absolute;
+  font-size: 5px;
+  width: 40px;
+  padding: 2px;
+  border-radius: 15px;
+  background-color: orange;
+  color: #fff;
+  text-shadow: none;
+}
+
 /* カレンダーフッター部分 */
 .calendar-footer {
   width: 100%;

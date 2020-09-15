@@ -41,8 +41,7 @@ $(function() {
   // 今月の一枚
   $("body").append('<div class="gray-layer"></div><div class="over-layer"></div>');
   $(".gray-layer").click(function() {
-    $(this).hide();
-    $(".over-layer").hide();
+    $(".gray-layer, .over-layer").hide();
   });
 
   $("a.modal-img").click(function() {
