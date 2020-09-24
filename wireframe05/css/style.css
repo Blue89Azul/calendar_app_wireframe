@@ -187,7 +187,7 @@ tr[class^="week"]>td>p {
   position: relative;
 }
 
-.calendar__days>.week>td>span {
+.calendar__days>.week>td>span:not(.planCount) {
   display: inline-block;
   position: absolute;
   top: 80%;
@@ -196,6 +196,19 @@ tr[class^="week"]>td>p {
   height: 5px;
   border-radius: 50%;
   background-color: black;
+}
+
+.calendar__days>.week>td>.planCount {
+  position: absolute;
+  display: block;
+  z-index: 2000;
+  font-size: 10px;
+  border-radius: 50%;
+  text-shadow: none;
+  background-color: red;
+  color: #fff;
+  top: 65%;
+  right: 10%;
 }
 
 .calendar__days>.week>td>span:nth-child(2) {

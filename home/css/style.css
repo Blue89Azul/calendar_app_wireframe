@@ -125,6 +125,10 @@
   font-size: 8em;
 }
 
+.homeTitles > h1 > span {
+  color: #F06292;
+}
+
 .homeTitles>p {
   font-size: 3em;
 }
