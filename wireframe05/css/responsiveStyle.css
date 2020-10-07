@@ -1,11 +1,41 @@
-@media screen and (min-width:768px) {
 /* 画面サイズ768以上の場合に適用 */
+  .rPosition {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .calendar {
+    margin: 0;
+  }
+
   .calendar__table {
-    height: 100vh;
+    height: 84vh;
+  }
+
+  .profile-top {
+    background-color: #fff;
   }
 
   .profile {
-    position: relative;
+    height: 100vh;
+    border-right: 1px solid #9A3325;
+    top: 0;
+    left: 0;
   }
 
-}
+  .btn__close {
+    display: none;
+  }
+
+  .profile__img-top {
+    height: 34vh;
+  }
+
+  .card-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .option-btn__acount {
+    display: none;
+  }

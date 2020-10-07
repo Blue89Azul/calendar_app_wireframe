@@ -1,6 +1,7 @@
 .container-fluid {
   width: 100%;
   height: 100vh;
+  padding: 0;
   background-color: #E3E1DB;
   position: relative;
   overflow: hidden;
@@ -50,6 +51,7 @@ li {
 /* カレンダーテーブル画面 */
 .calendar {
   color: #A8AD00;
+  padding: 0;
   justify-content: center;
   text-shadow: 1px 1px 0 #fff;
 }
