@@ -1,0 +1,11 @@
+@media screen and (min-width:768px) {
+/* 画面サイズ768以上の場合に適用 */
+  .calendar__table {
+    height: 100vh;
+  }
+
+  .profile {
+    position: relative;
+  }
+
+}

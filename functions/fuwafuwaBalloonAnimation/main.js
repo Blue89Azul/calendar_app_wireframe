@@ -1,6 +1,10 @@
 $(function() {
   $("button").click(function() {
-    $(".balloon").toggleClass("balloonAnimation");
+    $(".balloon").addClass("balloonAnimation");
     $("span").toggleClass("moveStraight");
+
+    $(".balloon:nth-child(10)").on('transitionend webkitTransitionEnd', function() {
+      $(".balloon").removeClass("balloonAnimation");
+    });
   });
 });
